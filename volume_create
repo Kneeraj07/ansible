@@ -1,5 +1,9 @@
-- name: Create FlexVol
-  netapp.ontap.na_ontap_volume:
+---
+- host: localhost
+  name: volume action
+  tasks
+   name: Create FlexVol
+   netapp.ontap.na_ontap_volume:
     state: present
     name: ansibleVolume12
     is_infinite: False
@@ -14,6 +18,6 @@
     wait_for_completion: True
     space_slo: none
     comment: ansible created volume
-    hostname: "{{ 192.168.1.16 }}"
-    username: "{{ admin }}"
-    password: "{{ root@123 }}"
+    hostname: "192.168.1.16"
+    username: "admin"
+    password: "root@123"
